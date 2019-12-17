@@ -63,6 +63,11 @@ public class Table {
         this.isBooked = isBooked;
         return Table.this;
     }
+
+    @Override
+    public String toString() {
+        return "Table{" + "id=" + id + ", name=" + name + ", isBooked=" + isBooked + '}';
+    }
     
     
     

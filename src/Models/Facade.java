@@ -6,8 +6,10 @@
 package Models;
 
 import Subjects.Male;
+import Subjects.Order;
 import Subjects.Person;
 import Subjects.Table;
+import java.util.List;
 import javax.swing.JTable;
 
 /**
@@ -20,10 +22,12 @@ public class Facade {
 
     private final Authentication authentication;
     private final OwnerTransactions ownerTransactions;
+    private final CustomerTransactions customerTransactions;
 
     private Facade() {
         authentication = new Authentication();
         ownerTransactions = new OwnerTransactions();
+        customerTransactions = new CustomerTransactions();
     }
 
     public boolean authenOwner(String aName, String aPassword) {
@@ -90,6 +94,30 @@ public class Facade {
     public Integer deleteTable(long aTableId) {
 
         return ownerTransactions.deleteTable(aTableId);
+
+    }
+
+    public List<Male> getAllMales() {
+
+        return customerTransactions.getAllMales();
+
+    }
+
+    public List<Table> getAllTables() {
+
+        return customerTransactions.getAllTables();
+
+    }
+
+    public Integer createOrder(Order aOrder) {
+
+        return customerTransactions.createOrder(aOrder);
+
+    }
+
+    public Long getuser(String aName) {
+
+        return customerTransactions.getuser(aName);
 
     }
 

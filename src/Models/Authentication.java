@@ -82,5 +82,18 @@ public class Authentication {
         return false;
     }
 
+      protected Long getUserId(String aName) {
+        try (PreparedStatement ps = con.prepareCall(Querys.GET_USER)) {
+            ps.setString(1, aName);
+            try (ResultSet rs = ps.executeQuery()) {
+                rs.next();
+                
+                return rs.getLong("id");
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex);
+        }
+        return null;
+      }
 
 }

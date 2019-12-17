@@ -24,8 +24,9 @@ public class Male {
     /**
      * @param id the id to set
      */
-    public void setId(long id) {
+    public Male setId(long id) {
         this.id = id;
+        return this;
     }
 
     /**
@@ -61,4 +62,11 @@ public class Male {
         this.balance = balance;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "Male{" + "id=" + id + ", name=" + name + ", balance=" + balance + '}';
+    }
+    
+    
 }

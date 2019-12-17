@@ -14,6 +14,7 @@ public class Order {
     private long id;
     private long customerID;
     private long maleID;
+    private long tableID;
     private int quantity;
 
     /**
@@ -26,8 +27,9 @@ public class Order {
     /**
      * @param id the id to set
      */
-    public void setId(long id) {
+    public Order setId(long id) {
         this.id = id;
+        return this;
     }
 
     /**
@@ -40,8 +42,9 @@ public class Order {
     /**
      * @param customerID the customerID to set
      */
-    public void setCustomerID(long customerID) {
+    public Order setCustomerID(long customerID) {
         this.customerID = customerID;
+        return this;
     }
 
     /**
@@ -54,8 +57,9 @@ public class Order {
     /**
      * @param maleID the maleID to set
      */
-    public void setMaleID(long maleID) {
+    public Order setMaleID(long maleID) {
         this.maleID = maleID;
+        return this;
     }
 
     /**
@@ -68,8 +72,18 @@ public class Order {
     /**
      * @param quantity the quantity to set
      */
-    public void setQuantity(int quantity) {
+    public Order setQuantity(int quantity) {
         this.quantity = quantity;
+        return this;
+    }
+
+    public long getTableID() {
+        return tableID;
+    }
+
+    public Order setTableID(long tableID) {
+        this.tableID = tableID;
+       return Order.this;
     }
     
 

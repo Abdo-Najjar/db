@@ -136,7 +136,7 @@ public class Login extends javax.swing.JFrame {
             person.setName(unameContnet);
             person.setType(Subjects.Type.Casher);
             Authentication.person = person;
-//            
+          
             new CasherIndex().setVisible(true);
 
             Login.this.dispose();
@@ -147,6 +147,7 @@ public class Login extends javax.swing.JFrame {
             Person person = PersonFactory.getPerson(Types.CUSTOMER);
             person.setName(unameContnet);
             person.setType(Subjects.Type.Customer);
+            person.setId(Facade.getFacade().getuser(unameContnet));
             Authentication.person = person;
             
             new CustomerIndex().setVisible(true);
