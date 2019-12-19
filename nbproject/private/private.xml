@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/abdo/NetBeansProjects/DesginPatterns/src/Views/CreateCasher.java</file>
-            <file>file:/home/abdo/NetBeansProjects/DesginPatterns/src/Views/CustomerIndex.java</file>
+            <file>file:/home/abdo/NetBeansProjects/DesginPatterns/src/Database/Querys.java</file>
             <file>file:/home/abdo/NetBeansProjects/DesginPatterns/src/Views/CasherIndex.java</file>
-            <file>file:/home/abdo/NetBeansProjects/DesginPatterns/src/Views/Login.java</file>
             <file>file:/home/abdo/NetBeansProjects/DesginPatterns/src/Views/OwnerIndex.java</file>
+            <file>file:/home/abdo/NetBeansProjects/DesginPatterns/src/Models/Facade.java</file>
         </group>
     </open-files>
 </project-private>

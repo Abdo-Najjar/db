@@ -40,9 +40,12 @@ public interface Querys {
     public String GET_TABLES = "SELECT id as ID , name as Name FROM `tables` ";
     public String DELETE_TABLE = "Delete from tables where id = ?";
 
+
     //orders
-    public String CREATE_ORDER = "insert into `order` set customerID = ? , maleID = ? , tableID = ? , quantity = ?";
-    public String GET_ORDERS = "SELECT  o.id , u.uname as Username, m.name as `Male Name`, t.name as `Table Name`, o.quantity FROM `order` as o , `users` as u , `males`as m , `tables` as t WHERE  m.id = o.maleID AND\n"
+    public String CREATE_ORDER = "insert into `orders` set customerID = ? , maleID = ? , tableID = ? , quantity = ?";
+    public String GET_ORDERS = "SELECT  o.id , u.uname as Username, m.name as `Male Name`, t.name as `Table Name`, o.quantity FROM `orders` as o , `users` as u , `males`as m , `tables` as t WHERE  m.id = o.maleID AND\n"
             + "o.customerID = u.id and o.tableID = t.id";
+    public String DELETE_ORDER = "delete from `orders` where id = ?";
 
 }
+

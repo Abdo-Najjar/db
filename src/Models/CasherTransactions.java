@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Models;
 
 import Database.DBConnection;
 import Database.DbUtils;
+import Database.Querys;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,11 +20,10 @@ public class CasherTransactions {
     public CasherTransactions() {
         this.con = DBConnection.getConnect().getConnection();
     }
-    
 
     protected void getAllOrders(JTable table) {
 
-        try (PreparedStatement st = con.prepareCall("")) {
+        try (PreparedStatement st = con.prepareCall(Querys.GET_ORDERS)) {
 
             st.executeQuery();
 
@@ -43,4 +38,21 @@ public class CasherTransactions {
         }
     }
 
+    
+    protected Integer deleteOrder(Long aOrderId) {
+
+        try (PreparedStatement ps = con.prepareCall(Querys.DELETE_ORDER)) {
+
+            ps.setLong(1, aOrderId);
+
+            return ps.executeUpdate();
+
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+
+        return null;
+    }
+
+    
 }

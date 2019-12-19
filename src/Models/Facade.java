@@ -23,11 +23,13 @@ public class Facade {
     private final Authentication authentication;
     private final OwnerTransactions ownerTransactions;
     private final CustomerTransactions customerTransactions;
+    private final CasherTransactions casherTransactions;
 
     private Facade() {
         authentication = new Authentication();
         ownerTransactions = new OwnerTransactions();
         customerTransactions = new CustomerTransactions();
+        casherTransactions = new CasherTransactions();
     }
 
     public boolean authenOwner(String aName, String aPassword) {
@@ -97,6 +99,12 @@ public class Facade {
 
     }
 
+    public Integer deleteOrder(Long aOrderId) {
+
+        return casherTransactions.deleteOrder(aOrderId);
+
+    }
+
     public List<Male> getAllMales() {
 
         return customerTransactions.getAllMales();
@@ -119,6 +127,11 @@ public class Facade {
 
         return customerTransactions.getuser(aName);
 
+    }
+
+    public void getAllOrders(JTable table) {
+
+        casherTransactions.getAllOrders(table);
     }
 
     public static Facade getFacade() {

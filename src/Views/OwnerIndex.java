@@ -323,13 +323,13 @@ public class OwnerIndex extends javax.swing.JFrame {
             defaultTableModel.removeRow(selectedcell);
 
         } catch (java.lang.ArrayIndexOutOfBoundsException ex) {
-            JOptionPane.showMessageDialog(OwnerIndex.this,
-                    "Select item to delete",
-                    "Error Message",
-                    JOptionPane.ERROR_MESSAGE);
 
+            System.out.println(ex.getMessage());
         }
-
+        JOptionPane.showMessageDialog(OwnerIndex.this,
+                "Select item to delete",
+                "Error Message",
+                JOptionPane.ERROR_MESSAGE);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -343,13 +343,13 @@ public class OwnerIndex extends javax.swing.JFrame {
             defaultTableModel.removeRow(selectedcell);
 
         } catch (java.lang.ArrayIndexOutOfBoundsException ex) {
-            JOptionPane.showMessageDialog(OwnerIndex.this,
-                    "Select item to delete",
-                    "Error Message",
-                    JOptionPane.ERROR_MESSAGE);
 
+            System.out.println(ex.getMessage());
         }
-
+        JOptionPane.showMessageDialog(OwnerIndex.this,
+                "Select item to delete",
+                "Error Message",
+                JOptionPane.ERROR_MESSAGE);
 
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -363,12 +363,13 @@ public class OwnerIndex extends javax.swing.JFrame {
             defaultTableModel.removeRow(selectedcell);
 
         } catch (java.lang.ArrayIndexOutOfBoundsException ex) {
-            JOptionPane.showMessageDialog(OwnerIndex.this,
-                    "Select item to delete",
-                    "Error Message",
-                    JOptionPane.ERROR_MESSAGE);
-
+            System.out.println(ex.getMessage());
         }
+
+        JOptionPane.showMessageDialog(OwnerIndex.this,
+                "Select item to delete",
+                "Error Message",
+                JOptionPane.ERROR_MESSAGE);
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
